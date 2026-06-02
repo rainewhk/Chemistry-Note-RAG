@@ -1,0 +1,17 @@
+# index
+
+Source chapter: Chapter 07 化学实验
+
+Original file: `index.md`
+
+Generated: 2026-06-02 13:14:25
+
+---
+
+---
+description: 本章聚焦高中化学实验，包含实验仪器、实验流程、常见实验现象与文字描述题模板，帮助提升实验题解题能力。
+---
+
+# 07 化学实验
+
+<CCChapterOverview />

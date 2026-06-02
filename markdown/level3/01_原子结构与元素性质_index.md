@@ -1,0 +1,17 @@
+# index
+
+Source chapter: Chapter 01 原子结构与元素性质
+
+Original file: `index.md`
+
+Generated: 2026-06-02 13:14:25
+
+---
+
+---
+description: 本章系统梳理核外电子排布、构造原理、元素周期表与周期律、电离能和电负性等核心知识，适合原子结构与元素性质专题复习。
+---
+
+# 01 原子结构与元素性质
+
+<CCChapterOverview />

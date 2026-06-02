@@ -1,0 +1,17 @@
+# index
+
+Source chapter: Chapter 10 化学反应与能量
+
+Original file: `index.md`
+
+Generated: 2026-06-02 13:14:25
+
+---
+
+---
+description: 本章梳理化学反应热效应和电化学相关知识，包括反应热与焓变、热化学方程式、盖斯定律原电池及电解池等重点内容。
+---
+
+# 10 化学反应与能量
+
+<CCChapterOverview />

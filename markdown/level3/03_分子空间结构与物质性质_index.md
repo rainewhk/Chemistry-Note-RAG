@@ -1,0 +1,17 @@
+# index
+
+Source chapter: Chapter 03 分子空间结构与物质性质
+
+Original file: `index.md`
+
+Generated: 2026-06-02 13:14:25
+
+---
+
+---
+description: 本章围绕分子空间结构展开，包含价层电子对互斥模型、杂化轨道理论、分子极性与手性、配位键及配合物等重点内容。
+---
+
+# 03 分子空间结构与物质性质
+
+<CCChapterOverview />

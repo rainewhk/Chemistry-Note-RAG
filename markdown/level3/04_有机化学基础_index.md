@@ -1,0 +1,17 @@
+# index
+
+Source chapter: Chapter 04 有机化学基础
+
+Original file: `index.md`
+
+Generated: 2026-06-02 13:14:25
+
+---
+
+---
+description: 本章覆盖有机化学基础知识与方法，包括有机物结构、分类命名、烃及其衍生物、生物大分子和有机推断等高频考点。
+---
+
+# 04 有机化学基础
+
+<CCChapterOverview />

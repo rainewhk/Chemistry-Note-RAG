@@ -1,0 +1,76 @@
+name: Sync Chemistry-Note RAG
+
+on:
+  schedule:
+    # 每天 UTC 02:00 运行 (北京时间 10:00)
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    # 支持手动触发
+  push:
+
+jobs:
+  sync-and-process:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      # 1. 检出本仓库
+      - name: Checkout this repository
+        uses: actions/checkout@v6
+
+      # 2. 安装 uv (Astral 官方推荐方式)
+      - name: Install uv
+        uses: astral-sh/setup-uv@v8.1.0
+        with:
+          python-version: 3.14
+
+      # 3. 检出 Chemistry-Note 仓库
+      - name: Checkout Chemistry-Note repository
+        uses: actions/checkout@v6
+        with:
+          repository: AnyayayPlus/Chemistry-Note
+          path: Chemistry-Note
+          fetch-depth: 1
+
+      # 4. 运行 RAG 处理脚本
+      - name: Process Chemistry-Note
+        run: uv run src/chemistry_rag.py --source ./Chemistry-Note --output .
+
+      # 5. 检查是否有变更
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # 显示状态
+          git status
+
+          # 检查是否有变更 (排除 Chemistry-Note 目录本身)
+          if git diff --quiet HEAD -- images/ markdown/; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "没有新的变化"
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "发现新的变化"
+          fi
+
+      # 6. 提交变更 (如果有)
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          # 添加处理后的文件
+          git add images/ markdown/
+
+          # 提交
+          git commit -m "auto: sync Chemistry-Note RAG data [$(date -u +'%Y-%m-%d %H:%M:%S UTC')]"
+
+          # 推送
+          git push
+
+      # 7. 清理 Chemistry-Note (保持仓库整洁)
+      - name: Cleanup
+        if: always()
+        run: |
+          rm -rf Chemistry-Note

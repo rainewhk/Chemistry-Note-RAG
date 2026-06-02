@@ -1,0 +1,17 @@
+[project]
+name = "chemistry-note-rag"
+version = "0.1.0"
+description = "Chemistry-Note RAG processor for markdown aggregation"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+chemistry-rag = "main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

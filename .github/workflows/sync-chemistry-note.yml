@@ -47,8 +47,8 @@ jobs:
           # 显示状态
           git status
 
-          # 检查是否有变更 (排除 Chemistry-Note 目录本身)
-          if git diff --quiet HEAD -- images/ markdown/; then
+          # 检查是否有变更 (包括未跟踪的新文件)
+          if [ -z "$(git status --porcelain images/ markdown/)" ]; then
             echo "has_changes=false" >> $GITHUB_OUTPUT
             echo "没有新的变化"
           else

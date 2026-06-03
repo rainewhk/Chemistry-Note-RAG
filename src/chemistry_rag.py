@@ -142,7 +142,6 @@ class ChemistryRAGProcessor:
 
         with open(output_file, 'w', encoding='utf-8') as f:
             f.write(f"# Chemistry Note - Full Summary\n\n")
-            f.write(f"Generated: {self._get_timestamp()}\n\n")
             f.write("---\n\n")
 
             for chapter in chapters:
@@ -179,7 +178,6 @@ class ChemistryRAGProcessor:
             with open(output_file, 'w', encoding='utf-8') as f:
                 f.write(f"# Chapter {chapter['number']} {chapter['name']}\n\n")
                 f.write(f"Source directory: `{chapter['folder_name']}`\n\n")
-                f.write(f"Generated: {self._get_timestamp()}\n\n")
                 f.write("---\n\n")
 
                 for md_file in chapter['md_files']:
@@ -210,7 +208,6 @@ class ChemistryRAGProcessor:
                     f.write(f"# {md_file.stem}\n\n")
                     f.write(f"Source chapter: Chapter {chapter['number']} {chapter['name']}\n\n")
                     f.write(f"Original file: `{md_file.name}`\n\n")
-                    f.write(f"Generated: {self._get_timestamp()}\n\n")
                     f.write("---\n\n")
                     f.write(content)
 
@@ -235,11 +232,6 @@ class ChemistryRAGProcessor:
         for char in invalid_chars:
             name = name.replace(char, '_')
         return name.strip()
-
-    def _get_timestamp(self) -> str:
-        """Get current timestamp"""
-        from datetime import datetime
-        return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 
 def main():

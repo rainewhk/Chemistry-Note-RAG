@@ -33,7 +33,14 @@ jobs:
           path: Chemistry-Note
           fetch-depth: 1
 
-      # 4. 运行 RAG 处理脚本
+      # 4. 清理旧的输出目录（确保同步删除）
+      - name: Clean old output directories
+        run: |
+          echo "Cleaning old output directories..."
+          rm -rf images/ markdown/
+          echo "Done."
+
+      # 5. 运行 RAG 处理脚本
       - name: Process Chemistry-Note
         run: uv run src/chemistry_rag.py --source ./Chemistry-Note --output .
 

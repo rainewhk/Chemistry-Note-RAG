@@ -1,7 +1,5 @@
 # Chemistry Note - Full Summary
 
-Generated: 2026-06-03 06:57:01
-
 ---
 
 # Chapter 00 说明

@@ -4,8 +4,6 @@ Source chapter: Chapter 03 分子空间结构与物质性质
 
 Original file: `index.md`
 
-Generated: 2026-06-03 06:57:01
-
 ---
 
 ---

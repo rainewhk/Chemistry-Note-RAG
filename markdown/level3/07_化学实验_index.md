@@ -4,8 +4,6 @@ Source chapter: Chapter 07 化学实验
 
 Original file: `index.md`
 
-Generated: 2026-06-03 06:57:01
-
 ---
 
 ---

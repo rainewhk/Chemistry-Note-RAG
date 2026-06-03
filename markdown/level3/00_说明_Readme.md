@@ -4,8 +4,6 @@ Source chapter: Chapter 00 说明
 
 Original file: `Readme.md`
 
-Generated: 2026-06-03 06:57:01
-
 ---
 
 ---

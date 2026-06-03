@@ -4,8 +4,6 @@ Source chapter: Chapter 08 化学反应能量与速率
 
 Original file: `index.md`
 
-Generated: 2026-06-03 06:57:01
-
 ---
 
 ---

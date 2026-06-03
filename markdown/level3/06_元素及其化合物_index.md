@@ -4,8 +4,6 @@ Source chapter: Chapter 06 元素及其化合物
 
 Original file: `index.md`
 
-Generated: 2026-06-03 06:57:01
-
 ---
 
 ---

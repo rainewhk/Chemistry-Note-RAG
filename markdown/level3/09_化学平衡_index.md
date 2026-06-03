@@ -4,8 +4,6 @@ Source chapter: Chapter 09 化学平衡
 
 Original file: `index.md`
 
-Generated: 2026-06-03 06:57:01
-
 ---
 
 ---

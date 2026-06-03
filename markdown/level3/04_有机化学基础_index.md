@@ -4,8 +4,6 @@ Source chapter: Chapter 04 有机化学基础
 
 Original file: `index.md`
 
-Generated: 2026-06-03 06:57:01
-
 ---
 
 ---

@@ -4,8 +4,6 @@ Source chapter: Chapter 01 原子结构与元素性质
 
 Original file: `index.md`
 
-Generated: 2026-06-03 06:57:01
-
 ---
 
 ---

@@ -163,4 +163,16 @@ matching_files = [f for f in files if '化学实验' in f]
 
 ## 授权
 
-请参阅原仓库 [AnyayayPlus/Chemistry-Note](https://github.com/AnyayayPlus/Chemistry-Note) 的授权条款。
+### 代码
+
+`src/`、`.github/workflows/`、`pyproject.toml` 等由本项目开发的代码采用 [MIT License](./LICENSE)。
+
+### 内容
+
+`markdown/`、`images/` 中的化学笔记内容来自 [AnyayayPlus/Chemistry-Note](https://github.com/AnyayayPlus/Chemistry-Note)，原始内容版权归原作者，本项目仅做格式转换和聚合处理，不改变其版权归属。
+
+### 使用建议
+
+- ✅ 个人学习、研究、RAG 应用
+- ✅ 非商业性教育用途
+- ❌ 商用出版、付费课程（请联系原项目获取授权）
